@@ -34,19 +34,20 @@ KLineChart/
 ## 核心类和数据结构
 
 ### TKLineData - K线数据结构
-TKLineData = record
-  DateTime: TDateTime;  // 时间
-  Open: Double;         // 开盘价
-  High: Double;         // 最高价
-  Low: Double;          // 最低价
-  Close: Double;        // 收盘价
+TKLineData = record  
+  DateTime: TDateTime;  // 时间  
+  Open: Double;         // 开盘价  
+  High: Double;         // 最高价  
+  Low: Double;          // 最低价  
+  Close: Double;        // 收盘价  
   Volume: Int64;        // 成交量
+end;    
 
 ### TMAData - 移动平均线数据
-TMAData = record
-  MA5: Double;          // 5日移动平均线
-  MA10: Double;         // 10日移动平均线
-end;
+TMAData = record  
+  MA5: Double;          // 5日移动平均线  
+  MA10: Double;         // 10日移动平均线  
+end;  
 
 ### TKLineChart - 主控件类
 主要方法：
