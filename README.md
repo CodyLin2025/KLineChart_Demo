@@ -34,20 +34,24 @@ KLineChart/
 ## 核心类和数据结构
 
 ### TKLineData - K线数据结构
+```pascal
 TKLineData = record  
   DateTime: TDateTime;  // 时间  
   Open: Double;         // 开盘价  
   High: Double;         // 最高价  
   Low: Double;          // 最低价  
   Close: Double;        // 收盘价  
-  Volume: Int64;        // 成交量
-end;    
+  Volume: Int64;        // 成交量  
+end;  
+```  
 
 ### TMAData - 移动平均线数据
+```pascal
 TMAData = record  
   MA5: Double;          // 5日移动平均线  
   MA10: Double;         // 10日移动平均线  
 end;  
+```  
 
 ### TKLineChart - 主控件类
 主要方法：
@@ -58,6 +62,7 @@ end;
 ## 使用方法
 
 ### 1. 创建控件实例
+```pascal
 var
   KLineChart: TKLineChart;
 begin
@@ -65,8 +70,10 @@ begin
   KLineChart.Parent := Self;
   KLineChart.Align := alClient;
 end;
+``` 
 
 ### 2. 添加K线数据
+```pascal
 var
   KLineData: TKLineData;
 begin
@@ -79,7 +86,7 @@ begin
   
   KLineChart.AddKLineData(KLineData);
 end;
-
+```
 ### 3. 刷新显示
 KLineChart.Invalidate; // 或者调用 KLineChart.Refresh;
 
